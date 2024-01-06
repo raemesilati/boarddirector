@@ -1,0 +1,17 @@
+.search-input {
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: start;
+    padding-inline: 20px;
+    width: 250px;
+    box-sizing: border-box;
+    background-image: url('../../../public/images/search.svg');
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+    @include mq('medium') {
+        width: 100%;
+        min-height: 40px;
+    }
+}

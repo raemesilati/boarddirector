@@ -1,0 +1,87 @@
+.new-page {
+    a {
+        color: gray;
+        text-decoration: none;
+        font-size: 20px;
+
+        &:hover {
+            color: black;
+        }
+
+        img {
+            transform: rotate(180deg);
+            vertical-align: middle;
+            width: 23px;
+            margin-bottom: 3px;
+        }
+    }
+    form {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        & > div {
+            display: flex;
+            flex-direction: column;
+
+            &.inputs-container {
+                flex: 0 calc(30% - 10px);
+                gap: 20px;
+
+                input, select {
+                    height: 35px;
+                    width: calc(100% - 45px);
+                    box-sizing: border-box;
+                    padding: 0 10px;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+
+                }
+                .ingredient {
+                    width: 100%;
+                    input[type="button"] {
+                       margin-inline-start: 10px; 
+                       vertical-align: middle;
+                       width: 35px;
+                       height: 35px;
+                       background-color: $primary;
+                       border: 0;
+                       border-radius: 5px;
+                       color: $white;
+                       font-size: 20px;
+                       cursor: pointer;
+                    }
+                    & > div {
+                        display: inline-block;
+                        width: calc(100% - 45px);
+                        vertical-align: middle;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &.textarea-container {
+                flex: 0 calc(70% - 10px);
+                gap: 0;
+                textarea {
+                    height: 100%;
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+            }
+            &.actions-container {
+                flex: 1;
+                align-items: flex-end;
+
+                input {
+                    background: $primary;
+                    color: $white;
+                    border: 0;
+                    padding: 10px 20px;
+                    border-radius: 5px; 
+                }
+            }
+        }
+    }
+}

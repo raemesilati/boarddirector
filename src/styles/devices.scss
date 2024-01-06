@@ -1,0 +1,19 @@
+// Bootstrap breakpoints: 576px, 768px, 992px, and 1200px
+
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'xm': 992px,
+  'large': 1140px,
+  'xl': 1200px,
+);
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+
+  @media screen and (max-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}

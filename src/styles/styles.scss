@@ -1,0 +1,51 @@
+
+@import './color.scss';
+@import './devices.scss';
+@import './components/mealCard.scss';
+@import './components/mealPreview.scss';
+@import './components/multiselect.scss';
+@import './components/pagination.scss';
+@import './components/tabHeader.scss';
+@import './components/search.scss';
+@import './pages/new-page.scss';
+
+.recipes-page {
+    padding: 50px;
+
+    @include mq('medium') {
+        padding: 20px;
+    }
+}
+
+.filter-inputs {
+    display: flex;
+    gap: 20px;
+
+    @include mq('medium') {
+        flex-direction: column;
+    }
+
+
+    a {
+        margin: auto;
+        margin-inline-end: 0;
+        background: $primary;
+        color: $white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+
+        @include mq('medium') {
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        &:hover {
+            background: $darker-primary;
+        }
+    }
+}
+
+
+

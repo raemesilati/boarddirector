@@ -1,0 +1,64 @@
+.multi-select {
+    position: relative;
+    width: 250px;
+
+    @include mq('medium') {
+        width: 100%;
+    }
+
+   button {
+        height: 40px;
+        width: 100%;
+        background: $white;
+        border: 1px solid gray;
+        border-radius: 5px;
+        text-align: start;
+        padding-inline: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: nowrap;
+       
+
+        img {
+            position: absolute;
+            width: 20px;
+            transform: rotate(90deg);
+            inset-inline-end: 10px;
+        }
+   } 
+
+   .dropdown {
+        width: 100%;
+        position: absolute;
+        background: $white; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        
+        ul {
+            padding: 0;
+            margin: 0;
+            max-height: 300px;
+            overflow: auto;
+            li {
+                list-style-type: none;
+                label {
+                    display: block;
+                    padding: 10px;
+                }
+            }
+        }
+
+        button {
+            width: auto;
+            margin: auto;
+            margin-inline-end: 20px;
+            margin-block-end: 20px;
+            background-color: $primary;
+            color: $white;
+            cursor: pointer;
+        }
+       
+   }
+}

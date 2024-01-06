@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 20px;
+
+    @include mq('medium') {
+        justify-content: center;
+    }
+
+    span {
+        color: gray;
+        font-size: 14px;
+    }
+
+    button {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+        height: auto;
+        width: 25px;
+
+        img {
+           width: 100%;
+        }
+
+        &:hover {
+            filter:brightness(100%)
+        }
+
+        &.prev {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
