@@ -58,7 +58,8 @@ export const TabsPage = ({ dispatch }) => {
   }
 
   const selectMeal = async (id) => {
-    const getMealData = isNaN(id) ? await getMeal(id) : meals.find(x => x.idMeal === id);
+    if (String(id).length === 13) return setSelectedMeal(meals.find(x => x.idMeal === id))
+    let getMealData = await getMeal(id)
     setSelectedMeal(getMealData)
   }
 
